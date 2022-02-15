@@ -7,7 +7,7 @@ import java.util.*;
 public class TestManejoUsuarios {
 
     public static void main(String[] args) {
-        
+
         UsuarioJDBC usuarioJDBC = new UsuarioJDBC();
         Scanner scanner = new Scanner(System.in);
         boolean salir = false;
@@ -35,26 +35,43 @@ public class TestManejoUsuarios {
                     Usuario insertarUsuario = new Usuario();
                     System.out.println("Inserte el username");
                     insertarUsuario.setUsername(scanner.next());
-                    
+
                     System.out.println("Inserte el password");
                     insertarUsuario.setPassword(scanner.next());
-                    
+
                     usuarioJDBC.insertar(insertarUsuario);
                     break;
-                    
+
                 case 3:
                     Usuario usuarioActualizar = new Usuario();
                     System.out.println("Inserte el id de la persona a modificar: ");
                     usuarioActualizar.setIdUsuario(scanner.nextInt());
-                    
+
                     System.out.println("Inserte el username de la persona a modificar: ");
                     usuarioActualizar.setUsername(scanner.next());
-                    
+
                     System.out.println("Inserte el password de la persona a modificar: ");
                     usuarioActualizar.setPassword(scanner.next());
-                    
+
                     usuarioJDBC.actualizar(usuarioActualizar);
-                    
+                    break;
+
+                case 4:
+                    Usuario usuarioEliminar = new Usuario();
+                    System.out.println("Inserte el ID del usuario a eliminar");
+                    usuarioEliminar.setIdUsuario(scanner.nextInt());
+
+                    usuarioJDBC.eliminar(usuarioEliminar);
+                    break;
+
+                case 5:
+                    salir = true;
+                    System.out.println("Adios");
+                    break;
+
+                default:
+                    System.out.println("Opcion incorrecta");
+
             }
         }
     }
