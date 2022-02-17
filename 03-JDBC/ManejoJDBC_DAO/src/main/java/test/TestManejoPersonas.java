@@ -2,8 +2,7 @@ package test;
 
 import datos.*;
 import java.sql.*;
-import domain.PersonaDTO;
-import java.util.List;
+import domain.Persona;
 
 public class TestManejoPersonas {
 
@@ -17,13 +16,20 @@ public class TestManejoPersonas {
                 conexion.setAutoCommit(false);
             }
 
-            PersonaDao personaDao = new PersonaDaoJDBC(conexion);
+            PersonaJDBC personaJDBC = new PersonaJDBC(conexion);
+            Persona cambioPersona = new Persona();
+            cambioPersona.setIdPersona(2);
+            cambioPersona.setNombre("Karala Ivonne");
+            cambioPersona.setApellido("Gomez");
+            cambioPersona.setEmail("kgomez@");
+            cambioPersona.setTelefono("22334455");
+            personaJDBC.actualizar(cambioPersona);
             
-            List<PersonaDTO> personas = personaDao.select();
+            Persona nuevaPersona = new Persona();
+            nuevaPersona.setNombre("Carlos");
+            nuevaPersona.setApellido("Ramirez");
             
-            for (PersonaDTO persona : personas) {
-                System.out.println("Persona DTO: " + persona);
-            }
+            personaJDBC.insertar(nuevaPersona);
             
             conexion.commit();
             
