@@ -23,3 +23,6 @@
 hs_err_pid*
 /Laboratorios/03-ManejoJDBC/target/
 /03-JDBC/ManejoTransaccionesJDBC/target/
+/04-JavaEE/HolaMundoJavaWeb/target/
+/04-JavaEE/Leccion01/HolaMundoServlets/target/
+/04-JavaEE/ManejoParametros/target/
