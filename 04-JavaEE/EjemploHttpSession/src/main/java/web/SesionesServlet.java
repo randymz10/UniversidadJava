@@ -16,7 +16,7 @@ public class SesionesServlet extends HttpServlet{
         String titulo = null;
         
         //Pedir el atributo contadoVisitas a la sesion
-        Integer contadorVisitas = (Integer) sesion.getAttribute("contadoVisitas");
+        Integer contadorVisitas = (Integer) sesion.getAttribute("contadorVisitas");
         //si es nulo es la primera vez que accedemos a la apliacion
         if(contadorVisitas == null){
             contadorVisitas = 1;
