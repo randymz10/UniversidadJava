@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet("CookiesServlet")
+@WebServlet("/CookiesServlet")
 public class CookiesServlet extends HttpServlet {
     
     @Override
