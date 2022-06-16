@@ -39,3 +39,5 @@ hs_err_pid*
 /05-JSPs/DeclaracionesJSP/target/
 /05-JSPs/DocumentosJSP/target/
 /05-JSPs/EjemploExcelJSP/target/
+/05-JSPs/EjemploInclusionEstatica/target/
+/05-JSPs/EjemploInclusionDinamica/target/
