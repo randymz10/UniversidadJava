@@ -1,8 +1,6 @@
 package datos;
 
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
 
