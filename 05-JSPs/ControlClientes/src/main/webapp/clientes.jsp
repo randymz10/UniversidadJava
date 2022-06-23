@@ -11,12 +11,20 @@
         <title>Control de clientes</title>
     </head>
     <body>
-        <h1>Control de cliente</h1>
+        <!--Cabecero-->
+        <jsp:include page="WEB-INF/paginas/comunes/cabecero.jsp"/>
+        <!--Botones de navegación-->
+        <jsp:include page="WEB-INF/paginas/comunes/botonesNavegacion.jsp"/>
+
+        
         <ul>
             <c:forEach var="cliente" items="${clientes}">
                 <li>${cliente.idCliente} ${cliente.nombre} ${cliente.apellido} ${cliente.saldo}</li>
                 </c:forEach>
         </ul>
+
+        <!--Pie de pagina-->
+        <jsp:include page="WEB-INF/paginas/comunes/piePagina.jsp"/>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" 
