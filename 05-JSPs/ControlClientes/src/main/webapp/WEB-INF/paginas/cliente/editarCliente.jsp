@@ -72,7 +72,7 @@
                     />
                   </div>
                   <div class="form-group mb-3">
-                    <label class="form-label" for="telefono">Telesfono</label>
+                    <label class="form-label" for="telefono">Telefono</label>
                     <input
                       type="tel"
                       class="form-control"
