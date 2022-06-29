@@ -12,7 +12,10 @@ Completion project of the Servlets and JSPs module for the Udemy Universidad Jav
 ## Build in 
 
 - Java 8 with Maven
+- Servlets
+- JSPs
 - Bootstrap
+- MySQL
 
 ## Author
 
