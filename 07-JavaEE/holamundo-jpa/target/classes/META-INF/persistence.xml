@@ -12,7 +12,7 @@
             <property name="javax.persistence.jdbc.password" value="admin" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.MysqlDataSource" />
             <property name="eclipselink.logging.level.sql" value="FINE" />
-            <property name="ecliplink.logging.parameters" value="true" />
+            <property name="eclipselink.logging.parameters" value="true" />
         </properties>
     </persistence-unit>
 </persistence>
