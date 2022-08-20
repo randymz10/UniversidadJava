@@ -4,15 +4,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Listado de Personas</title>
+        <title>Listado de Usuarios</title>
     </head>
     <body>
-        <h1>Listado de Personas</h1>
+        <h1>Listado de Usuarios</h1>
         <ul>
-            <c:forEach items="${personas}" var="persona">
-                <li>${persona.nombre} ${persona.apellido}</li>
-            </c:forEach>
+            <c:forEach items="${usuarios}" var="usuario">
+                <li>${usuario.username} ${usuario.password}</li>
+                </c:forEach>
         </ul>
         <a href="index.html">Volver al inicio</a>
+
     </body>
 </html>
