@@ -24,7 +24,7 @@ public class Persona implements Serializable {
     private Integer idPersona;
     @Size(max = 45)
     private String nombre;
-    //@Size(max = 45)
+    @Size(max = 45)
     private String apellido;
     // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
     @Size(max = 45)
