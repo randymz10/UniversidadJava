@@ -26,8 +26,6 @@ public class PersonaBean {
         log.debug("Iniciando e objeto PersonaBean");
     }
 
-    ;
-    
     @PostConstruct
     public void inicializar() {
         //Iniciamos las variables
@@ -55,6 +53,22 @@ public class PersonaBean {
 
     public void setPersonas(List<Persona> personas) {
         this.personas = personas;
+    }
+    
+    public void agregarPersona() {
+        this.personaService.registrarPersona(personaSeleccionada);
+        this.personas.add(personaSeleccionada);
+        this.personaSeleccionada = null;
+    }
+    
+    public void eliminarPersona() {
+        this.personaService.eliminarPersona(personaSeleccionada);
+        this.personas.remove(this.personaSeleccionada);
+        this.personaSeleccionada = null;
+    }
+    
+    public void reiniciarPersonaSeleccionada() {
+        this.personaSeleccionada = new Persona();
     }
 
 }
