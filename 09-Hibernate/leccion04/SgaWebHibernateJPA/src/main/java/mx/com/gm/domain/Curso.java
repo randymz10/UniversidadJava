@@ -1,10 +1,12 @@
 package mx.com.gm.domain;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "curso")
 public class Curso implements Serializable{
     
     public static final long serialVersionUID = 1L;
@@ -17,6 +19,9 @@ public class Curso implements Serializable{
     private String nombre;
     
     private Double precio;
+    
+    @OneToMany(mappedBy = "curso")
+    private List<Asignacion> asignaciones;
 
     public Curso() {
     }
@@ -47,6 +52,14 @@ public class Curso implements Serializable{
 
     public void setPrecio(Double precio) {
         this.precio = precio;
+    }
+
+    public List<Asignacion> getAsignaciones() {
+        return asignaciones;
+    }
+
+    public void setAsignaciones(List<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
     }
 
     @Override

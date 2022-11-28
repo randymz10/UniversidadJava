@@ -1,10 +1,12 @@
 package mx.com.gm.domain;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "alumno")
 public class Alumno implements Serializable{
     
     public static final long serialVersionUID = 1L;
@@ -25,6 +27,9 @@ public class Alumno implements Serializable{
     @JoinColumn(name = "id_contacto", referencedColumnName = "id_contacto")
     @ManyToOne
     private Contacto contacto;
+    
+    @OneToMany(mappedBy = "alumno")
+    private List<Asignacion> asignaciones;
 
     public Alumno() {
     }
@@ -73,6 +78,14 @@ public class Alumno implements Serializable{
         this.contacto = contacto;
     }
 
+    public List<Asignacion> getAsignaciones() {
+        return asignaciones;
+    }
+
+    public void setAsignaciones(List<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
+    }
+    
     @Override
     public String toString() {
         return "Alumno{" + "idAlumno=" + idAlumno + ", nombre=" + nombre + ", apellido=" + apellido + ", domicilio=" + domicilio + ", contacto=" + contacto + '}';

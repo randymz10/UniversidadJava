@@ -5,6 +5,7 @@ import java.util.Objects;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "domicilio")
 public class Domicilio implements Serializable{
 
     public static final long serialVersionUID = 1L;
@@ -12,7 +13,7 @@ public class Domicilio implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_domicilio")
-    private Integer idDomiciliio;
+    private Integer idDomicilio;
     
     private String calle;
     
@@ -24,16 +25,16 @@ public class Domicilio implements Serializable{
     public Domicilio() {
     }
 
-    public Domicilio(Integer idDomiciliio) {
-        this.idDomiciliio = idDomiciliio;
+    public Domicilio(Integer idDomicilio) {
+        this.idDomicilio = idDomicilio;
     }
 
-    public Integer getIdDomiciliio() {
-        return idDomiciliio;
+    public Integer getIdDomicilio() {
+        return idDomicilio;
     }
 
-    public void setIdDomiciliio(Integer idDomiciliio) {
-        this.idDomiciliio = idDomiciliio;
+    public void setIdDomicilio(Integer idDomicilio) {
+        this.idDomicilio = idDomicilio;
     }
 
     public String getCalle() {
@@ -62,13 +63,13 @@ public class Domicilio implements Serializable{
 
     @Override
     public String toString() {
-        return "Domicilio{" + "idDomiciliio=" + idDomiciliio + ", calle=" + calle + ", noCalle=" + noCalle + ", pais=" + pais + '}';
+        return "Domicilio{" + "idDomicilio=" + idDomicilio + ", calle=" + calle + ", noCalle=" + noCalle + ", pais=" + pais + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 53 * hash + Objects.hashCode(this.idDomiciliio);
+        hash = 53 * hash + Objects.hashCode(this.idDomicilio);
         return hash;
     }
 
@@ -84,7 +85,7 @@ public class Domicilio implements Serializable{
             return false;
         }
         final Domicilio other = (Domicilio) obj;
-        return Objects.equals(this.idDomiciliio, other.idDomiciliio);
+        return Objects.equals(this.idDomicilio, other.idDomicilio);
     }
     
     
