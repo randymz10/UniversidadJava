@@ -15,6 +15,9 @@
                 <a th:href="@{/(lang=es)}">ES</a> |
                 <a th:href="@{/(lang=en)}">EN</a>
             <span>2022 [[ #{plantilla.pie-pagina} ]] &copy; Randy Muñoz</span>
+            <form th:action="@{/logout}" method="post">
+                <a href="#" onclick="this.parentNode.submit()">Logout</a>
+            </form>
             </div>
         </footer>
     </body>
