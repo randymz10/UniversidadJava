@@ -55,3 +55,10 @@ WHERE id_usuario = 1;
 UPDATE usuario
 SET password = '$2a$10$LKWa8Xt/rocEBLtbYJittuGnYcy0QVrrR2MtYrZ/XqCceehXpzgya'
 WHERE id_usuario = 2;
+
+ALTER TABLE persona ADD saldo double;
+
+UPDATE persona SET saldo = 100 WHERE id_persona = 1;
+UPDATE persona SET saldo = 350 WHERE id_persona = 2;
+
+

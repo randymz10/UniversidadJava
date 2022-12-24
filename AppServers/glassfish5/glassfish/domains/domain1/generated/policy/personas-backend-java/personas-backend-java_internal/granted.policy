@@ -1,0 +1,21 @@
+/* AUTOMATICALLY GENERATED ON Fri Dec 23 23:43:40 BRT 2022*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "PersonaServiceRS", "agregarPersona,Local,mx.com.gm.domain.Persona";
+  permission javax.security.jacc.EJBMethodPermission "PersonaDaoImpl", "insertarPersona,Local,mx.com.gm.domain.Persona";
+  permission javax.security.jacc.EJBMethodPermission "PersonaDaoImpl", "encontrarTodasPersonas,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PersonaDaoImpl", "actualizarPersona,Local,mx.com.gm.domain.Persona";
+  permission javax.security.jacc.EJBMethodPermission "PersonaDaoImpl", "encontrarPersona,Local,mx.com.gm.domain.Persona";
+  permission javax.security.jacc.EJBMethodPermission "PersonaServiceRS", "listarPersonas,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PersonaServiceRS", "encontrarPersona,Local,int";
+  permission javax.security.jacc.EJBMethodPermission "PersonaDaoImpl", "eliminarPersona,Local,mx.com.gm.domain.Persona";
+  permission javax.security.jacc.EJBMethodPermission "PersonaServiceRS", "eliminarPersona,Local,int";
+  permission javax.security.jacc.EJBMethodPermission "PersonaServiceRS", "modificarPersona,Local,int,mx.com.gm.domain.Persona";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "PersonaDaoImpl", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "PersonaServiceRS", "**";
+};
+

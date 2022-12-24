@@ -1,0 +1,15 @@
+/* AUTOMATICALLY GENERATED ON Fri Dec 23 23:43:40 BRT 2022*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.WebUserDataPermission "/";
+  permission javax.security.jacc.WebResourcePermission "/";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission javax.security.jacc.WebRoleRefPermission "", "**";
+  permission javax.security.jacc.WebRoleRefPermission "mx.com.gm.web.JAXRSActivator", "**";
+  permission javax.security.jacc.WebRoleRefPermission "default", "**";
+};
+
