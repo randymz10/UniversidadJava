@@ -1,0 +1,6 @@
+/home/randy/NetBeansProjects/UniversidadJava/11-AngularJavaEE/personas-backend-java/src/main/java/mx/com/gm/domain/Persona.java
+/home/randy/NetBeansProjects/UniversidadJava/11-AngularJavaEE/personas-backend-java/src/main/java/mx/com/gm/web/CorsFilter.java
+/home/randy/NetBeansProjects/UniversidadJava/11-AngularJavaEE/personas-backend-java/src/main/java/mx/com/gm/web/JAXRSActivator.java
+/home/randy/NetBeansProjects/UniversidadJava/11-AngularJavaEE/personas-backend-java/src/main/java/mx/com/gm/servicio/PersonaServiceRS.java
+/home/randy/NetBeansProjects/UniversidadJava/11-AngularJavaEE/personas-backend-java/src/main/java/mx/com/gm/data/PersonaDaoImpl.java
+/home/randy/NetBeansProjects/UniversidadJava/11-AngularJavaEE/personas-backend-java/src/main/java/mx/com/gm/data/PersonaDao.java
