@@ -9,11 +9,11 @@ export class DataService {
     urlBase = 'http://localhost:8080/personas-backend-java/webservice/personas';
 
     cargarPersonas() {
-        return this.httClient.get(this.urlBase);
+        return this.httClient.get<Persona>(this.urlBase);
     }
 
     agregarPersona(persona: Persona) {
-        return this.httClient.post(this.urlBase, persona);
+        return this.httClient.post<Persona>(this.urlBase, persona);
     }
 
     modificarPersona(idPersona: number, persona: Persona) {
