@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="col">
+    <h3>{{ titulo }}</h3>
+  </div>
+  <hr />
+  <form class="form-row">
+    <div class="form-group col-md-2">
+      <label for="nombre" class="sr-only">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        name="nombre"
+        id="nombre"
+        placeholder="Nombre"
+        [(ngModel)]="nombreInput"
+      />
+    </div>
+    <div class="form-group col-md-2">
+      <label for="apellido" class="sr-only">Apellido</label>
+      <input
+        type="text"
+        class="form-control"
+        name="apellido"
+        id="apellido"
+        placeholder="Apellido"
+        [(ngModel)]="apellidoInput"
+      />
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let persona of personas; let i = index">
+        {{ i }} {{ persona.nombre }} {{ persona.apellido }}
+      </div>
+    </div>
+  </div>
+</div>
